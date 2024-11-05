@@ -59,14 +59,12 @@ test = {
         {
           'code': r"""
           >>> roll_dice(9, make_test_dice(6))
-          72862184559d57299206f055e2cc5a63
-          # locked
+          54
           >>> roll_dice(7, make_test_dice(2, 2, 2, 2, 2, 2, 1))
-          43d176e102c8d95338faf8791aa509b3
-          # locked
+          1
           """,
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'multiline': False
         }
       ],
