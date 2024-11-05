@@ -62,6 +62,7 @@ def take_turn(num_rolls, player_score, opponent_score, dice=six_sided):
     assert num_rolls <= 10, 'Cannot roll more than 10 dice.'
     # BEGIN PROBLEM 3
     "*** YOUR CODE HERE ***"
+    return roll_dice(num_rolls, dice) if num_rolls else boar_brawl(player_score, opponent_score)
     # END PROBLEM 3
 
 
