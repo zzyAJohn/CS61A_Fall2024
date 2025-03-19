@@ -118,10 +118,14 @@ def balanced(m):
     True
     """
     "*** YOUR CODE HERE ***"
-    if is_arm(left(m)) and is_arm(right(m)):
-        return length(left(m)) * total_mass(left(m)) == length(right(m)) * total_mass(right(m))
+    if is_mobile(m):
+        left_arm = left(m)
+        right_arm = right(m)
+        left_torque = length(left_arm) * total_mass(end(left_arm))
+        right_torque = length(right_arm) * total_mass(end(right_arm))
+        return left_torque == right_torque and balanced(end(left_arm)) and balanced(end(right_arm))
     else:
-        return False
+        return True  # Planets are always balanced
 
 
 def berry_finder(t):
